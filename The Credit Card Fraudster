@@ -1,15 +1,3 @@
-cardNumPre = "543210"
-cardNumPost = "1234"
-potentialSolutions = []
-
-for i in range(0,1000000):
-    cardNumMid = (str(i).zfill(6))
-    ccNum = cardNumPre + cardNumMid + cardNumPost
-    if int(ccNum) % 123457 == 0:
-        potentialSolutions.append(ccNum)
-        
-for j in potentialSolutions:
-    print("CTFlearn{" + j + "}")
 /*
 The Credit Card Fraudster
 I just arrested someone who is probably the most wanted credit card fraudster in Europe. She is a smart cybercriminal, always a step ahead INTERPOL and she kept unnoticed for years by never buying online, but buying goods with a different card every time and in different stores. My cyber-analysts found out after collecting all evidences she hacked into one the largest payment provider in Europe, reverse-engineered the software present on the server and partly corrupted the card number validation code to accept all her payments. The change enables acceptance of any transaction with a card number multiple of 123457 and the Luhn check digit is valid.
@@ -33,3 +21,16 @@ Hints:
 
 2/ Flag format is CTFlearn{card_number}
 */
+
+cardNumPre = "543210"
+cardNumPost = "1234"
+potentialSolutions = []
+
+for i in range(0,1000000):
+    cardNumMid = (str(i).zfill(6))
+    ccNum = cardNumPre + cardNumMid + cardNumPost
+    if int(ccNum) % 123457 == 0:
+        potentialSolutions.append(ccNum)
+        
+for j in potentialSolutions:
+    print("CTFlearn{" + j + "}")
