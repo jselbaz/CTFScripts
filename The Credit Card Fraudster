@@ -1,0 +1,13 @@
+cardNumPre = "543210"
+cardNumPost = "1234"
+potentialSolutions = []
+
+for i in range(0,1000000):
+    cardNumMid = (str(i).zfill(6))
+    ccNum = cardNumPre + cardNumMid + cardNumPost
+    if int(ccNum) % 123457 == 0:
+        print(ccNum)
+        potentialSolutions.append(ccNum)
+        
+for j in potentialSolutions:
+    print("CTFlearn{" + j + "}")
